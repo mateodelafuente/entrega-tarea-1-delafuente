@@ -1,19 +1,25 @@
-import { View } from "react-native";
-import BotonTarjeta from "./botonTarjeta";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-
-export default function Index() {
+export default function Home() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <BotonTarjeta title="Tarjeta 1" onPress={() => console.log("Tarjeta 1")} />
-      <BotonTarjeta title="Tarjeta 2" onPress={() => console.log("Tarjeta 2")} />
-      <BotonTarjeta title="Tarjeta 3" onPress={() => console.log("Tarjeta 3")} />
+    <View style={styles.container}>
+      <Text style={styles.text}>APP TAREA 2</Text>
+      <Text style={styles.text}>🦑 AGUANTE PLATENSE VAMOS CALAMAR 🦑</Text>
     </View>
   );
-} 
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+  },
+  text: {
+    fontSize: 20,
+    textAlign: "center",
+    marginBottom: 10,
+  },
+});
